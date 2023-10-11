@@ -1,4 +1,4 @@
-name: Upstream Sync
+name: Main Branch Sync
 
 permissions:
   contents: write
