@@ -6,6 +6,7 @@ import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
 import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
+import QrcodeIcon from "../icons/qrcode.svg";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
@@ -147,9 +148,11 @@ export function SideBar(props: { className?: string }) {
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
           ChatGPT Next
         </div>
-        <div className={styles["sidebar-sub-title"]}>关注公众号获取密码</div>
+        <div className={styles["sidebar-sub-title"]}>
+          关注公众号回复666获取访问密码
+        </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <ChatGptIcon />
+          <QrcodeIcon />
         </div>
       </div>
 
