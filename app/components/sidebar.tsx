@@ -6,7 +6,7 @@ import { IconButton } from "./button";
 import SettingsIcon from "../icons/settings.svg";
 import GithubIcon from "../icons/github.svg";
 import ChatGptIcon from "../icons/chatgpt.svg";
-import QrcodeIcon from "../icons/qrcode.svg";
+import QrcodeIcon from "../icons/qrcode.png";
 import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import DeleteIcon from "../icons/delete.svg";
@@ -162,7 +162,8 @@ export function SideBar(props: { className?: string }) {
           关注公众号回复666获取访问密码
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <QrcodeIcon />
+          {/* <QrcodeIcon /> */}
+          <img src={QrcodeIcon.src} width={80} height={80} alt="qrcode" />
         </div>
       </div>
 

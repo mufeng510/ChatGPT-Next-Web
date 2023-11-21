@@ -7,6 +7,7 @@ import { useAccessStore } from "../store";
 import Locale from "../locales";
 
 import BotIcon from "../icons/bot.svg";
+import QrcodeIcon from "../icons/qrcode_lg.jpg";
 import { useEffect } from "react";
 import { getClientConfig } from "../config/client";
 
@@ -33,7 +34,8 @@ export function AuthPage() {
   return (
     <div className={styles["auth-page"]}>
       <div className={`no-dark ${styles["auth-logo"]}`}>
-        <BotIcon />
+        {/* <BotIcon /> */}
+        <img src={QrcodeIcon.src} width={100} height={100} alt="qrcode" />
       </div>
 
       <div className={styles["auth-title"]}>{Locale.Auth.Title}</div>
