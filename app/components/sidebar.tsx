@@ -13,6 +13,7 @@ import DeleteIcon from "../icons/delete.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
 import DragIcon from "../icons/drag.svg";
+import Image from "next/image";
 
 import Locale from "../locales";
 
@@ -156,14 +157,14 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          ChatGPT Next
+          沐风的GPT
         </div>
         <div className={styles["sidebar-sub-title"]}>
           关注公众号回复666获取访问密码
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           {/* <QrcodeIcon /> */}
-          <img src={QrcodeIcon.src} width={80} height={80} alt="qrcode" />
+          <Image src={QrcodeIcon.src} width={80} height={80} alt="qrcode" />
         </div>
       </div>
 
