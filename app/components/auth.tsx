@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Path } from "../constant";
 import { useAccessStore } from "../store";
 import Locale from "../locales";
-
+import Image from "next/image";
 import BotIcon from "../icons/bot.svg";
 import QrcodeIcon from "../icons/qrcode_lg.jpg";
 import { useEffect } from "react";
@@ -35,7 +35,7 @@ export function AuthPage() {
     <div className={styles["auth-page"]}>
       <div className={`no-dark ${styles["auth-logo"]}`}>
         {/* <BotIcon /> */}
-        <img src={QrcodeIcon.src} width={100} height={100} alt="qrcode" />
+        <Image src={QrcodeIcon.src} width={100} height={100} alt="qrcode" />
       </div>
 
       <div className={styles["auth-title"]}>{Locale.Auth.Title}</div>
@@ -63,6 +63,17 @@ export function AuthPage() {
             onChange={(e) => {
               accessStore.update(
                 (access) => (access.openaiApiKey = e.currentTarget.value),
+              );
+            }}
+          />
+          <input
+            className={styles["auth-input"]}
+            type="password"
+            placeholder={Locale.Settings.Access.Google.ApiKey.Placeholder}
+            value={accessStore.googleApiKey}
+            onChange={(e) => {
+              accessStore.update(
+                (access) => (access.googleApiKey = e.currentTarget.value),
               );
             }}
           />
